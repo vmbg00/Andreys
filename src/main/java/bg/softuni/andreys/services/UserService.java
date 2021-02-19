@@ -10,4 +10,6 @@ public interface UserService {
     boolean authenticate(String username, String password);
 
     void login(UserLoginServiceModel map);
+
+    void logout();
 }
