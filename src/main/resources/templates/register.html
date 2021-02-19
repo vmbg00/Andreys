@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 	<head>
         <meta charset="UTF-8"/>
@@ -76,7 +76,7 @@
         </div>
     </form>
 </main>
-	<footer class="footer bg-dark  py-2">
+	<footer th:replace="fragments/fragment :: footer" class="footer bg-dark  py-2">
 		<div class="container-fluid text-center">
 			<div class="footer-background h5 text-white">
 				Andrey's & Spring Team 2020.

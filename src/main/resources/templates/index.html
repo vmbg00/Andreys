@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="/css/style.css"/>
 </head>
 <body>
-<header>
+<header th:replace="fragments/fragment :: header">
      <nav class="navbar bg-dark navbar-expand-lg navbar-background bg-dark ">
         <a class="nav-link text-white active h5" href="/">Andrey's</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -20,10 +20,10 @@
             <ul class="navbar-nav row">
 
                 <li class="nav-item col-md-4">
-                    <a class="nav-link text-white active h6" href="/">Login</a>
+                    <a class="nav-link text-white active h6" href="">Login</a>
                 </li>
                 <li class="nav-item col-md-4">
-                    <a class="nav-link text-white active h6" href="/" >Register</a>
+                    <a class="nav-link text-white active h6" href="" >Register</a>
                 </li>
             </ul>
         </div>
@@ -36,14 +36,14 @@
         <p class="h4">On our website you will find the best clothes to match your style.</p>
         <hr class="my-3"/>
         <h3>
-            <a class="text-primay" href="/">Login</a>
+            <a class="text-primay" href="/users/login">Login</a>
             if you have an account or
-            <a class="text-primay" href="/">Register</a>
+            <a class="text-primay" href="/users/register">Register</a>
             now and check our deals.
         </h3>
     </div>
 </main>
-<footer class="footer bg-dark  py-2">
+<footer th:replace="fragments/fragment :: footer" class="footer bg-dark  py-2">
 		<div class="container-fluid text-center">
 			<div class="footer-background h5 text-white">
 				Andrey's & Spring Team 2020.
